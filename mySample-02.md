@@ -10,13 +10,14 @@ graph LR
         CC_Estimates{Estimates Module}
     end
 
-    subgraph Option3_Components ["Option 3 Components"]
+    subgraph Option1_Components ["Option 1 Components"]
         direction LR
-        InHouseInterface["In-House Built Interface"]
+        ThirdPartyEMR["3rd Party Dental EMR (e.g., Power Practice, Gold Dental)"]
+        DataTransfer["Data Transfer (File/HL7?)"]
         Insurance["Insurance Carriers / CDAnet (ITRANS)"]
     end
 
-    ConnectCare_Epic_Wisdom -- Sends --> InHouseInterface
-    Insurance -- Receives --> InHouseInterface
-    InHouseInterface -- Sends --> Insurance
-    InHouseInterface -- Recieves --> ConnectCare_Epic_Wisdom
+    ConnectCare_Epic_Wisdom -- DataTransfer --> ThirdPartyEMR
+    ThirdPartyEMR -- CDAnet/ITRANS --> Insurance
+    Insurance -- CDAnet/ITRANS --> ThirdPartyEMR
+    CC_Estimates -- Potentially informs --> ThirdPartyEMR
