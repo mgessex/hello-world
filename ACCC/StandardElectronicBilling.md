@@ -1,5 +1,8 @@
 ```mermaid
-graph TD
+---
+title: Standard Electronic Billing Process
+---
+flowchart TD
     A[Procedure Completed] --> B(RDA Enters Codes in Power Practice);
     B --> C(Patient Checkout with Admin);
     C --> D{Submit Electronically via CDA Net};

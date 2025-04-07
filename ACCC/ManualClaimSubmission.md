@@ -1,4 +1,7 @@
 ```mermaid
+---
+title: ACCC Manual Claims Submission Process
+---
 graph LR
     A[Procedure/Checkout Completed] --> B(Admin Prints Paper Claim Form);
     B --> C(Patient Signs Form);

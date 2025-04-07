@@ -1,5 +1,8 @@
 ```mermaid
-graph LR
+---
+title: ACCC Payment Plan
+---
+flowchart LR
     A[Patient Agrees to Payment Plan] --> B(Patient Pays 50% Upfront);
     B --> C[Admin Applies Initial Payment in PP];
     C --> D[Admin Records Patient on Spreadsheet];

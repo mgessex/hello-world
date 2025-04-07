@@ -1,5 +1,8 @@
 ```mermaid
-graph LR
+---
+title: ACCC Alberta Health Consult Process
+---
+flowchart LR 
     A[Procedure Completed] --> B(DA Enters Codes in Power Practice);
     B --> C(Patient Checkout with Admin);
     C --> D[Admin Shuts Off Private Insurance, if needed];
