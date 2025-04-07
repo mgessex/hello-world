@@ -1,5 +1,5 @@
 ```mermaid
-graph TD
+graph LR
     A[Procedure/Checkout Completed] --> B(Admin Prints Paper Claim Form);
     B --> C(Patient Signs Form);
     C --> D(Clinic Signs Form);
