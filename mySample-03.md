@@ -3,12 +3,18 @@ flowchart LR
     subgraph Public Internet
         User
     end
-    subgraph LoadBalancingZone
-        LoadBalancer
+    subgraph DMZ
+        subgraph LoadBalancingZone
+            LoadBalancer
+        end
+        subgraph WebServerZone
+            WebServerA
+            WebServerB
+        end
     end
-    subgraph WebServerZone
-        WebServerA
-        WebServerB
+    subgraph Internal Network
+        DatabaseServerA
+        DatabaseServerB
     end
 
     User -- tcp/80--> LoadBalancer
